@@ -6,4 +6,472 @@
 
 html, body {
     height: 100%;
+    font-family: 'Playfair Display', sans-serif;
+    background-color: rgb(222, 222, 222);
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.nav {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+    margin: 15px 0px;
+}
+
+.nav a {
+    color: #e0a133;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.hidden-menu {
+    display: none;
+    width: 50px;
+    height: 30px;
+    z-index: 4;
+    top: 33px;
+    left: 30px;
+    position: fixed;
+}
+
+.hidden-menu input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+}
+
+.hidden-menu .line {
+    background: white;
+    display: block;
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.nav-toggle .ico-arrow {
+    background-image: url(../img/Arrow.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    position: absolute;
+}
+
+.hidden-menu .line:not(:last-child) {  
+    margin-bottom: 6px;
+}
+.hidden-menu input:checked ~ span 
+{   
+    background-color: #fff;
+    opacity: 1;
+    transform: translateY(12px) translateX(0) rotate(45deg);
+}
+
+.hidden-menu input:checked ~ span:nth-last-child(3) {
+    opacity: 0; 
+}
+
+.hidden-menu input:checked ~ span:nth-last-child(2) 
+{
+    transform: translateY(-12px) translateX(0) rotate(-45deg);
+}
+
+.header__toggle-menu {
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: -200px;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    z-index: -1;
+    overflow: hidden;
+    position: fixed;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.hidden-menu input:checked ~ .header__toggle-menu {
+    opacity: 1;
+    overflow: visible;
+    left: -105px;
+    top: -70px;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: fixed;
+}
+.nav-toggle {
+    margin-top: 44%;
+}
+
+.header__toggle-menu ul li {
+    padding-left: 30%;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.header__toggle-menu li a{
+    color: #F9F8FF;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.hidden-menu li a:hover {
+    font-weight: bold;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.header {
+    color: #2b2b2b;
+    margin-bottom: 40px;
+}
+
+.header .wrapper {
+    display: flex;
+}
+
+h2 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+h3 {
+    color: #e0a133;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.about__me {
+    color: #ffffff;
+    width: 50%;
+    margin-right: 50px;
+    background-color: #000000;
+    padding: 25px;
+}
+
+.about__me p {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.about__me p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.container__location {
+    display: flex;
+    align-items: center;
+}
+
+.icon__location {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: url(../icon/location.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    margin-right: 10px;
+}
+
+.container__info {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: center;
+    text-align: end;
+}
+
+.education {
+    margin-bottom: 45px;
+}
+
+.education ul {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container__educ {
+    display: flex;
+}
+
+.icon__educ {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../icon/educ.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    margin-right: 10px;
+}
+
+.work h5 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container__work {
+    display: flex;
+}
+
+.icon__work {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(../icon/work.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    margin-right: 10px;
+}
+
+.contacts {
+    margin-bottom: 60px;
+}
+
+.contacts h2 {
+    font-size: 34px;
+    border-top: 1px solid;
+    padding-top: 35px;
+}
+
+.contacts p {
+    transition: 0.3s;
+}
+
+.contacts p:hover {
+    color: #e0a133;
+    cursor: pointer;
+    transition: 0.3s;   
+}
+
+.contacts a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contacts a:hover {
+    color: #e0a133; 
+}
+
+.container__contacts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+}
+
+.icon__phone {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../icon/phone.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-right: 10px;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+}
+
+.icon__mail {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../icon/mail.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-right: 10px;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.icon__gh {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../icon/gh.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-right: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.icon__link {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../icon/link.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-right: 10px;
+}
+
+.skills h2 {
+    padding: 30px 0px;
+    font-size: 24px;
+}
+
+.skills p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.icon__skills {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../icon/skills.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    margin-right: 10px;
+}
+
+.skills ul {
+    margin-left: 20px;
+}
+
+.skills img {
+    width: 750px;
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-header__skills {
+    display: flex;
+    align-items: center;
+}
+
+details {
+    border: 1px solid #131d3b15;
+    padding: 30px 25px 0px;
+    margin-bottom: 10px;
+}
+
+details span {
+    font-weight: 700;
+    font-style: italic;
+}
+
+details[open] {
+    padding-bottom: 50px;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: #131D3B;
+    padding-bottom: 20px;
+    position: relative;
+}
+  
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '';
+    padding-right: 0.5em;
+    display: block;
+    clear: both;
+    background: url(../icon/plus.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    right: 28px;
+    position: absolute;
+    top: -3px;
+}
+
+details[open] > summary::before {
+    background-image: url(../icon/minus.png);
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+}
+
+details[open] > summary {color: #e0a133;}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #e0a133;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;    
+    padding: 10px;
+}
+
+.footer p {
+    color: #e0a133;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.footer a:hover {
+    color: rgb(255, 255, 255);
 }
