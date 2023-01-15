@@ -1,0 +1,170 @@
+@media (max-width: 1024px) {
+
+    .hidden-menu {
+        display: block;
+    }
+  
+    .nav {
+        display: none;
+    }
+
+}
+
+@media (max-width: 970px) {
+
+    .skills img {
+        width: 550px;
+    }
+
+}
+
+@media (max-width: 785px) {
+
+    .wrapper__portfolio {
+        grid-gap: 0px 20px;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+    .skills img {
+        width: 300px;
+    }
+
+    summary::before {
+        right: 0px;
+    }
+
+    .wrapper__portfolio {
+        display: block;
+    }
+
+    .project__two {
+        display: none;
+    }
+
+    .project__two-media {
+        display: block;
+        border-top: 1px solid;
+        padding: 20px 0px;
+        margin-top: 70px;
+    }
+
+    .container__img {
+        margin-top: 20px;
+    }
+
+    .info__portfolio {
+        text-align: center;
+        border-bottom: none;
+        border-top: 1px solid;
+        padding: 20px 0px;
+        margin-top: 70px;
+    }
+
+    .container__portfolio {
+        border-bottom: none;
+        margin-bottom: -70px;
+    }
+
+}
+
+@media (max-width: 515px) {
+
+    :root {
+        --icon-width: 20px;
+        --icon-hieght: 20px;
+        --icon-bg-size: 20px 20px;
+    }
+
+    .skills img {
+        width: 300px;
+    }
+
+    summary::before {
+        right: 0px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .hidden-menu .line {
+        width: 70%;
+        height: 3px;
+    }
+
+    .hidden-menu {
+        top: 15px;
+        left: 11px;
+    }
+
+    .hidden-menu input:checked ~ span:nth-last-child(2) {
+        transform: translateY(-7px) translateX(0) rotate(-45deg);
+    }
+
+    .nav-toggle {
+        margin-top: 38%;
+    }
+
+    .skills h2 {
+        padding: 15px 0px;
+    }
+
+    .skills p {
+        font-size: 14px;
+    }
+
+    summary::before {
+        width: 22px;
+        height: 22px;
+        background-size: 22px 22px;
+        top: 7px;
+    }
+
+    summary {
+        font-size: 14px;
+    }
+
+    details {
+        padding: 10px 15px 0px 15px;
+    }
+
+    .container__portfolio {
+        padding: 15px 0px;
+    }
+
+    .info__portfolio h3 {
+        font-size: 18px;
+    }
+
+    .info__portfolio p {
+        font-size: 14px;
+    }
+
+    .info__portfolio a {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+
+    .footer a {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .skills img {
+        width: 250px;
+    }
+
+}
