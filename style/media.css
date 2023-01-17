@@ -18,12 +18,108 @@
 
 }
 
+@media (max-width: 925px) {
+
+    .promo h2 {
+        font-size: 45px;
+        left: 90px;
+    }
+
+    .promo h3 {
+        font-size: 22px;
+        left: 90px;
+        top: 265px;
+    }
+
+    .container__location {
+        margin-bottom: 20px;
+    }
+
+}
+
 @media (max-width: 785px) {
 
     .wrapper__portfolio {
         grid-gap: 0px 20px;
     }
 
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .slider {
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .header .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__me {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container__educ {
+        justify-content: end;
+    }
+
+    .container__work {
+        justify-content: center;
+    }
+
+    .work {
+        text-align: center;
+    }
+
+    .work h5 {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .work h4 {
+        margin-bottom: 10px;
+    }
+
+    .education {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        background: #ffffffe0;
+        padding: 50px;
+        width: 100%;
+    }
+
+    .container__contacts {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .contacts {
+        margin-bottom: 0px;
+    }
+
+    .contacts h2 {
+        font-size: 24px;
+        text-align: center;
+        padding-top: 0px;
+        border: none;
+    }
+
+    .footer {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 670px) {
@@ -70,6 +166,38 @@
 
 }
 
+@media (max-width: 585px) {
+
+    .education {
+        padding: 20px;
+    }
+
+    .promo h2 {
+        font-size: 30px;
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+
+    .promo h3 {
+        font-size: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        top: calc(60% - 25px);
+    }
+
+}
+
 @media (max-width: 515px) {
 
     :root {
@@ -88,6 +216,23 @@
 
     h2 {
         font-size: 16px;
+    }
+
+    .btn {
+        width: 35px;
+        height: 35px;
+        top: calc(65% - 25px);
+    }
+
+    .arrow-left {
+        left: 2px;
+        background-size: 30px 30px;
+        top: 2px;
+    }
+
+    .arrow-right {
+        background-size: 30px 30px;
+        top: 3px;
     }
 
 }
@@ -127,8 +272,15 @@
         top: 7px;
     }
 
+    details[open] > summary::before {
+        background-image: url(../icon/minus.png);
+        width: 22px;
+        height: 22px;
+        background-size: 22px 22px;
+    }
+
     summary {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     details {
@@ -165,6 +317,10 @@
 
     .skills img {
         width: 250px;
+    }
+
+    .promo h2 {
+        left: -10px;
     }
 
 }
